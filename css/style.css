@@ -1,0 +1,554 @@
+/*
+Template Name: Aytor
+Version: 1.0.0
+Author: Aytor
+
+
+Table of Content
+===========================
+   ********Home-Page*********
+   1) Navigation Section
+   2) Banner Section
+   3) Feature Section.....
+*/
+
+/* Common Css Start */
+h1,h2,h3,h4,h5,h6,
+p,
+small,span,
+ol,ul{
+   margin: 0;
+   padding: 0;
+}
+ol,ul{
+   list-style-type: none;
+}
+a{
+   text-decoration: none;
+}
+
+:root {
+   --body-font-one: 'Josefin Sans', sans-serif;
+   --body-font-two: 'Roboto', sans-serif;
+   --text-color: #11161E;
+   --common-color: #fff;
+   --black-color: #000;
+   --primary-3D-color: #151A32;
+   --primary-1st-color: #FF6F61;
+   --primary-2nd-color: #FF5645;
+   --paragraph-color: #444;
+   --background-color-one: #F1F1F1;
+   --background-color-two: #F1F3F4;
+}
+h1,h2,h3,h4,h5,h6,
+p{
+color: var(--common-color);
+}
+body{
+   font-family: var(--body-font-one);
+   font-weight: 400;
+}
+
+
+/* //Common Css End */
+/*Nav-Bar Start*/
+#navbarNavDropdown ul li a{
+    font-weight: 400;
+   color: #11161E;
+   font-size: 16px;
+   padding: 0 20px;
+   transition: 0.5s;
+}
+#navbarNavDropdown ul li:hover > a,
+.navbar .nav_icon .btn:hover i{
+   color: #FF5645;
+}
+#navbarNavDropdown ul li ul:hover li a{
+   background-color: rgb(215, 213, 213);
+}
+#navbarNavDropdown ul li ul:hover{
+   background-color: rgb(215, 213, 213);
+}
+#navbarNavDropdown ul li ul li:hover a{
+   background-color: #ff8f85;
+  color: #11161E;
+
+}
+#navbarNavDropdown .nav_icon .btn{
+   font-weight: 400;
+   color: #11161E;
+   font-size: 16px;
+}
+.navbar .nav_icon .btn{
+   background: none;
+}
+.navbar .nav_icon i{
+   position: relative;
+}
+.navbar .nav_icon i span{
+   position: absolute;
+   background: #FF5645;
+   color: #E5E5E5;
+   border: 2px solid #FF5645;
+   border-radius: 50%;
+   left: 70%;
+   bottom: 65%;
+   font-size: 12px;
+}
+/*Nav-Bar End*/
+
+
+/*Banner Section Start*/
+#banner .banner_slider_item{
+   height: 800px;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   z-index: 1;
+   
+}
+.banner_one{
+   background-image: linear-gradient(to right, rgba(2, 5, 19, 0.7),rgba(2, 4, 17, 0.62),rgba(1, 4, 15, 0.55),rgba(1, 3, 13, 0.48),rgba(0, 0, 0, 0));
+}
+
+.banner_slider_item::after{
+   content: '';
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   background-image: linear-gradient(to right, rgba(2, 5, 19, 0.7),rgba(2, 4, 17, 0.62),rgba(1, 4, 15, 0.55),rgba(1, 3, 13, 0.48),rgba(0, 0, 0, 0));
+   z-index: -1;
+}
+#banner .banner_slider_item h5{
+font-family: var(--body-font-one);
+font-weight: 400;
+font-size: 18px;;
+line-height: 28px;
+color: var(--common-color)
+}
+#banner .banner_slider_item h1{
+   font-family: var(--body-font-one);
+   font-weight: 700;
+   font-size: 64px;;
+   line-height: 74px;
+   color: var(--common-color)
+   }
+   #banner .banner_slider_item p{
+      font-family: var(--body-font-two);
+      font-size: 16px;;
+      line-height: 28px;
+      color: var(--common-color);
+      margin-bottom: 20px;
+      }
+      #banner .banner_slider_item button{
+         font-family: var(--body-font-one);
+         font-size: 18px;;
+         line-height: 30px;
+         color: var(--common-color);
+         padding: 18px 24px;
+         background-color: var(--primary-1st-color);
+         border: solid 1px var(--primary-1st-color);
+         }
+         #banner .banner_slider_item button i{
+            margin-left: 8px;
+         }
+/*/Banner Section End*/
+
+
+/*Product Section One Start*/
+#product_section_one .left_product_item{
+   position: relative;
+}
+#product_section_one .right_product{
+   position: relative;
+}
+#product_section_one .overlay{
+position: absolute;
+background-color: rgba(0, 0, 0, 0.652);
+top: 15px;
+bottom: 15px;
+left: 15px;
+right: 15px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+transform: scale(0);
+transform-origin: top;
+transition: 0.6s;
+z-index: 0;
+}
+#product_section_one .left_product_item:hover .overlay{
+   transform: scale(1);
+   transform-origin: top;
+   z-index: 1;
+}
+#product_section_one .overlay h2,
+#product_section_one .overlay_two h2{
+   
+font-family: Josefin Sans; 
+font-weight: 700;
+font-size: 30px;
+line-height: 40px;
+color: var(--common-color);
+}
+#product_section_one .overlay a,
+#product_section_one .overlay_two a{
+   
+   font-family: Josefin Sans; 
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 28px;
+   color: var(--common-color);
+   }
+
+#product_section_one .overlay_two{
+   position: absolute;
+   position: absolute;
+background-color: rgba(0, 0, 0, 0.652);
+top: 20px;
+bottom: 20px;
+left: 35px;
+right: 35px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+transform: scale(0);
+transform-origin: top;
+transition: 0.6s;
+z-index: 0; 
+}
+#product_section_one .right_product:hover .overlay_two{
+   transform: scale(1);
+   transform-origin: top;
+   z-index: 1;
+}
+#product_section_one a{
+   cursor: pointer;
+}
+#product_section_one a i{
+margin-left: 2px;
+}
+
+
+/*//Product Section One End*/
+
+
+/*New Arrival-Product Section Two Start*/
+#product_section_two img{
+   height: 250px;
+   width: 320px;
+   margin: auto;
+   
+   
+}
+#product_section_two .beauty_item{
+   border: solid 1px rgba(0, 0, 0, 0.542);
+   text-align: center;
+}
+#product_section_two .beauty_item h6{
+   padding-top: 6%;
+   font-family: Josefin Sans; 
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 26px;
+   color: var(--paragraph-color);
+}
+#product_section_two .beauty_item p{
+   padding-bottom: 6%;
+   font-family: Josefin Sans; 
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 28px;
+   color: var(--paragraph-color);
+}
+#product_section_two .beauty_item{
+   position: relative;
+}
+#product_section_two .beauty_item .overlay{
+   position: absolute;
+   top: 10%;
+   left: 0px;
+   right: 15px;
+   text-align: right;
+   transform: scaleX(0);
+   transform-origin: bottom;
+   transition: 0.6s;
+   z-index: 0;
+   }
+   #product_section_two .beauty_item:hover .overlay{
+      transform: scaleX(1);
+      transform-origin: bottom;
+      z-index: 1;
+   }
+   #product_section_two .beauty_item .overlay button{
+      padding: 5px 5px;
+      background: none;
+      text-align: right;
+      border: none;
+   }
+   #product_section_two .beauty_item .overlay button i{
+      border: var(--background-color-two) solid 1px;
+      padding: 15px 15px;
+      background: var(--background-color-two);
+      border-radius: 50%;
+   }
+   #product_section_two .checked {
+      color: orange;
+    }
+    #product_section_two span{
+      cursor: pointer;
+    }
+/*//New Arrival-Product Section Two End*/
+
+/*Banner Section Two Start*/
+
+#banner_two{
+background: url(../img/offer_banner_2_1.jpg);
+background-position: center;
+background-size: cover;
+height: 524px;
+}
+#banner_two h2{
+   padding-bottom: 3%;
+   font-family: Josefin Sans; 
+   font-weight: 700;
+   font-size: 36px;
+   line-height: 46px;
+   color: var(--common-color);
+}
+#banner_two p{
+   padding-bottom: 4%;
+   font-family: var(--body-font-two); 
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 28px;
+   color: var(--common-color);
+}
+#banner_two button{
+   font-family: var(--body-font-one);
+   font-size: 18px;;
+   line-height: 30px;
+   color: var(--common-color);
+   padding: 18px 20px;
+   background-color: var(--primary-1st-color);
+   border: solid 1px var(--primary-1st-color);
+   }
+   #banner_two button i{
+      margin-left: 8px;
+   }
+   #banner_two .banner_content{
+      margin-top: 7%;
+   }
+
+/*//Banner Section TWo End*/
+
+
+
+
+
+
+/*Product Section Three Start*/
+   #product_section_three .btn_content{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+   }
+   #product_section_three .btn_content h4{
+      visibility: hidden;
+   }
+   #product_section_three .beauty_item:hover h4{
+   font-family: var(--body-font-one);
+   font-size: 10px;;
+   line-height: 20px;
+   padding: 13px 18px;
+   background-color: #151A32;
+   color: var(--common-color);
+   visibility: visible;
+   }
+#product_section_three img{
+width: 260px;
+height: 200px;
+margin-left: auto;}
+
+#product_section_three .beauty_item{
+   position: relative;
+   margin-bottom: 2%;
+   text-align: center;
+   position: relative;
+}
+#product_section_three .beauty_item .rotate{
+   position: absolute;
+   font-size: 1rem;
+   color: rgb(162, 44, 44);
+   text-transform: uppercase;
+   bottom: 0;
+   left: 10%;
+   bottom: 90%;
+   rotate: -90deg;
+   padding: 6px 14px;
+   background-color: var(--primary-1st-color);
+   border: var(--primary-1st-color) 1px solid;
+   border-top-left-radius: 50px;
+   border-bottom-left-radius: 50px;
+   font-size: 16px;
+   font-weight: 400;
+   color: var(--common-color);
+
+}
+#product_section_three .beauty_item .rotate_s{
+   padding: 6px 10px;
+   font-size: 14px;
+}
+
+
+#product_section_three .beauty_item .overlay{
+   position: absolute;
+   bottom: 50%;
+   top: 5px;
+   right: 30px;
+   text-align: right;
+   transform: scaleX(0);
+   transform-origin: bottom;
+   transition: 0.6s;
+   z-index: 0;
+}
+#product_section_three .beauty_item:hover .overlay{
+   transform: scaleX(1);
+   transform-origin: bottom;
+   z-index: 1;
+}
+#product_section_three .beauty_item .overlay button{
+   padding: 4px 3px;
+   background: none;
+   text-align: right;
+   border: none;
+}
+#product_section_three .beauty_item .overlay button i{
+   border: var(--background-color-two) solid 1px;
+   padding: 15px 15px;
+   background: none;
+}
+#product_section_three .beauty_item .overlay button:hover i{
+   background-color: var(--primary-2nd-color);
+}
+#product_section_two .checked {
+   color: orange;
+ }
+ #product_section_two span{
+   cursor: pointer;
+ }
+ #product_section_three .checked{
+   color: orange;
+   font-size: 12px;
+ }
+ #product_section_three .container h3{
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 12px;
+   font-family: var(--body-font-one);
+   font-weight: 700;
+   color: rgba(17, 22, 30, 1);
+   font-size: 36px;
+   line-height: 46ox;
+ }
+ #product_section_three .container a{
+   padding: 12px 13px;
+   border: solid 1px var(--primary-1st-color);
+   margin: auto;
+ }
+ #product_section_three .container .see_all i{
+margin-left: 4px;
+ }
+
+ /*//Product Section Three End*/
+
+
+
+
+
+ /*Account_Contaact Section Start*/
+ #account_contact{
+   background-color: var(--text-color);
+   margin-top: 5%;
+ }
+ .account_social_site{
+   height: 150px;
+   padding-top: 2%;
+   padding-bottom: 4%;
+   border: none;
+   border-bottom: 1px solid #E0E0E0;
+ }
+
+ #account_contact .payment_site{
+text-align: right;
+color: var(--common-color);
+ }
+ 
+ #account_contact .social_site i{
+   color: #444444;
+   padding: 6px 8px;
+   background-color: var(--background-color-one);
+ }
+
+ #account_contact .aytor_logo img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ account_information{
+   text-align: center;
+ }
+.account_information h2{
+   font-size: 24px;
+   line-height: 34px;
+   font-weight: 700;
+   text-align: left;
+}
+.account_information .my_account a,
+.account_information .support a{
+   display: block;
+   color: var(--common-color);
+   font-family: var(--body-font-two);
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 28px;
+}
+.account_information h5{
+   color: var(--common-color);
+   font-family: var(--body-font-two);
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 28px;
+}
+ /*Account_Contaact Section End*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
